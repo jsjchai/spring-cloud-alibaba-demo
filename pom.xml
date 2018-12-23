@@ -15,7 +15,7 @@
     <packaging>pom</packaging>
 
     <name>spring-cloud-alibaba-demo</name>
-    <description>spring cloud alibaba study</description>
+    <description>spring cloud alibaba demo</description>
 
     <parent>
         <groupId>org.springframework.cloud</groupId>
