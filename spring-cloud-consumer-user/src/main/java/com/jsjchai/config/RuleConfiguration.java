@@ -16,4 +16,5 @@ public class RuleConfiguration {
     public RestTemplate restTemplate() {
         return new RestTemplate();
     }
+
 }
