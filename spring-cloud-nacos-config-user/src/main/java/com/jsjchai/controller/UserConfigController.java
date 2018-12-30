@@ -17,7 +17,7 @@ public class UserConfigController {
      * jconsole 设置值
      * MBean->org.springframework.cloud.context.environment->操作->设置属性
      */
-    //@Autowired
+    @Autowired
     private User user;
 
 

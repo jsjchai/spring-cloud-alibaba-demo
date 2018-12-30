@@ -1,5 +1,8 @@
 server:
   port: 10001
+spring:
+  profiles:
+    active: test
 management:
   endpoints:
     web:

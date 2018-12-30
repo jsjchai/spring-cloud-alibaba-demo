@@ -29,7 +29,7 @@ public class UserInfoController {
         User user = new User();
         user.setName(name);
         user.setId(id);
-        user.setName(name);
+        user.setAge(age);
         return user.toString();
     }
 }
