@@ -1,9 +1,9 @@
 package com.jsjchai.config;
 
-import org.springframework.cloud.client.loadbalancer.LoadBalanced;
+import com.netflix.loadbalancer.IRule;
+import com.netflix.loadbalancer.RandomRule;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.web.client.RestTemplate;
 
 /**
  * @ author jsjchai.
@@ -12,9 +12,8 @@ import org.springframework.web.client.RestTemplate;
 public class RuleConfiguration {
 
     @Bean
-    @LoadBalanced
-    public RestTemplate restTemplate() {
-        return new RestTemplate();
+    public IRule rule(){
+        return new RandomRule();
     }
 
 }

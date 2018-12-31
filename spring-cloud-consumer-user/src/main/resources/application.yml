@@ -8,9 +8,30 @@ spring:
     nacos:
       discovery:
         server-addr: localhost:8848
+    sentinel:
+      transport:
+        port: 8719
+        dashboard: localhost:20001
+      datasource:
+        ds1:
+          file:
+            file: classpath:flowrule.json
+            data-type: json
+            rule-type: flow
+        ds2:
+          nacos:
+            server-addr: localhost:8848
+            dataId: degraderule.json
+            groupId: SENTINEL_GROUP
+            data-type: json
 
 management:
   endpoints:
     web:
       exposure:
         include: "*"
+
+feign:
+  sentinel:
+    enabled: true
+
